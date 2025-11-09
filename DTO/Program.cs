@@ -9,8 +9,8 @@
 
 namespace DTO
 {
-    // (1) Domain Model/Entity (represents internal business logic.)
-    // This class is mapped to a database table.
+    // (1) Domain Model/Entity (represents internal business logic or data.)
+    // This class is mapped to a database table in a real application.
     public class User
     {
         public int Id { get; set; }
@@ -63,6 +63,7 @@ namespace DTO
 
 
             // Domain object from database
+            // In a real application, this would come from a database or business logic layer.
             User user = new()
             {
                 Id = 1,
@@ -71,7 +72,7 @@ namespace DTO
             };
 
 
-            // Convert domain object/entity/model to DTO
+            // Convert the domain object/entity/model to the DTO
             UserDto userDto = UserMapper.MapToDto(user);
 
 
